@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新建商家",
+  "usingComponents": {
+    "header": "../../components/header/header",
+    "layer": "../../components/layer/layer"
+  }
+}

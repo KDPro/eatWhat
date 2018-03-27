@@ -1,0 +1,17 @@
+ <view class='nav'>
+  <view class="header">
+  <view bindtap='breakfast' class="{{(indexY==0 ?'active':'')}} breakfast">期望午餐</view>
+  <view bindtap='business' class="{{(indexY==1 ?'active':'')}}">新建商家</view>
+  <view bindtap='other' class="tobottom {{(!isShow?'active tobottomA':'')}}">其他 
+    
+     <view hidden="{{isShow}}">
+      <view wx:for="{{otherList}}" wx:key="{{index}}" data-index='{{index}}' bindtap='otherS'>{{item}}</view>
+    </view>
+  </view>
+</view>
+</view> 
+ <layer 
+inputList="{{inputList}}" 
+title="退出该群"
+modalShow="{{modalShow}}" 
+catch:myeventBox="myeventBox"></layer>

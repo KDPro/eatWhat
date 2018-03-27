@@ -1,0 +1,48 @@
+<!--pages/localBook/localBook.wxml-->
+<header indexY="{{index}}"></header>
+<view class="bookBox">
+  <view class="groupName">群名：{{crowdName}}</view>
+  <view class="groupDetail">
+    <view class="balance">群余额：{{crowdMoney}}</view>
+    <view class="unit">单位：元</view>
+    <view class="account">
+      <button bindtap='selectShowF'>账户操作</button>
+       <view class="select" wx:if="{{selectShow}}">
+        <view bindtap='toCharge'>充值</view>
+        <view bindtap='recharge'>提现</view>
+      </view> 
+    </view>
+  </view>
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">店铺/对象</view>
+      <view class="th">人员</view>
+      <view class="th ">时间</view>
+      <view class="th ">充值</view>
+      <view class="th ">消费</view>
+      <view class="th ">账户余额</view>
+    </view>
+    <scroll-view scroll-y class="tbody">
+      <block wx:for="{{payMentList}}" wx:key="{{index}}">
+        <view class="tr">
+          <view class="td"><view class="img"><image src="{{item.url}}"></image></view></view>
+          <view class="td">{{item.name}}</view>
+          <view class="td">{{item.cDate}}</view>
+          <view class="td"><text wx:if="{{item.pay>0?true:false}}">{{item.pay}}</text></view>
+          <view class="td"><text wx:if="{{item.pay<0?true:false}}">{{item.pay}}</text></view>
+          <view class="td">{{item.balance}}</view>
+        </view>
+      </block>
+    </scroll-view> 
+  </view>
+</view>
+<view class="footer">
+  <view class="fooL"></view>
+  <view class='logoName'>吃什么</view>
+  <view class="fooR"></view>
+</view>
+<layer 
+inputList="{{inputList}}" 
+title="{{title}}"
+modalShow="{{modalShow}}" 
+catch:myeventBox="myeventBox"></layer>

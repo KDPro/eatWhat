@@ -1,0 +1,126 @@
+/* components/layer.wxss */
+.clear:after {
+  content:"";
+  display:block;
+  clear: both;
+}
+.layer {
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,.3);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:20;
+} 
+.layerBox {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:260px;
+  background-color: white;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+}
+.layerHeader {
+  height:50px;
+  line-height: 50px;
+  color:#ff7200;
+  text-align: center;
+  font-size:15px;
+  border-bottom:1px solid #dfdfdf;
+  letter-spacing: 2px;
+}
+.layerB {
+    padding:20px;
+}
+.groupBtn view {
+  float:left;
+}
+.groupBtn view:nth-of-type(2) {
+  float:right;
+}
+.groupBtn view button {
+  border:1px solid #ff7200;
+  width:100px;
+  height:35px;
+  line-height:35px;
+  border-radius: 35px;
+  background-color:#ff7200;
+  color:white;
+  font-size:15px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.groupBtn view:nth-of-type(2) button {
+  color:#ff7200;
+  background-color:white;
+}
+
+.tips {
+  margin-bottom:20px;
+  text-align: center;
+  font-size:15px;
+}
+.inputGroup .input {
+  width:100%;
+  box-sizing: border-box;
+  padding:0 20px;
+  border:1px solid #bfbfbf;
+  height:35px;
+  border-radius: 35px;
+  margin-bottom:20px;
+}
+
+.labelInput {
+  display:flex;
+  margin-bottom:20px;
+}
+.labelInput .label {
+  text-align: right;
+  padding-right:10px;
+  box-sizing: border-box;
+  margin-top:5px;
+}
+.labelInput .laInput {
+  flex:5;
+  position:relative;
+}
+.laInput input {
+  width:100%;
+  height:30px;
+  border-radius: 30px;
+  border:1px solid #bfbfbf;
+  box-sizing: border-box;
+  padding:0 20px 0 10px;
+}
+.labelInput .laInputIcon:after {
+  content:'\25BC';
+  position:absolute;
+  top:5px;
+  right:10px;
+}
+.labelInput .laInputIconT:after {
+  content:'\25B2';
+  position:absolute;
+  top:5px;
+  right:10px;
+}
+.select {
+  position:absolute;
+  top:32px;
+  left:0px;
+  height:100px;
+  border:1px solid #bfbfbf;
+  border-radius: 10px;
+  background-color: white;
+  z-index:10;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding:5px 10px;
+}
+.selectList {
+  border-bottom:1px solid #bfbfbf;
+  padding:5px;
+}
+

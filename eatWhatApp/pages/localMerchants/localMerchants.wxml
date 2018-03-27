@@ -1,0 +1,22 @@
+<!--pages/localMerchants/localMerchants.wxml-->
+<view class="indexBox">
+<header indexY="{{index}}"></header>
+<scroll-view scroll-y class="list">
+  <block wx:for="{{groupLists}}" wx:key="{{index}}">
+      <view class="group" bindtap='todetail' data-groupid = "{{item.storesId}}">
+        <view class="groupImg">
+          <image src='{{item.image.url}}'></image>
+        </view>
+        <view class="groupName">
+          <view>{{item.shopName}}<text>记录人：{{item.user.nickname}}</text></view>
+          <view><icon class="iconfont icon-caozuo_xuandian_dingwei"></icon>{{item.addr}} </view>
+        </view>
+      </view>
+  </block>
+</scroll-view>
+</view>
+<view class="footer">
+  <view class="fooL"></view>
+  <view class='logoName'>吃什么</view>
+  <view class="fooR"></view>
+</view>

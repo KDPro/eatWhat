@@ -1,0 +1,48 @@
+<!--components/layer.wxml-->
+<view class="layer" wx:if="{{modalShow}}">
+  <view class="layerBox">
+    <view class="layerHeader">{{title}}
+    </view>
+    <view class="layerB">
+      <view class="inputGroup" 
+      wx:for="{{inputList}}" 
+      wx:key="{{index}}"
+      wx:for-index="parentIndex">
+        <view class="labelInput" wx:if="{{item.inputType=='labelInput'}}">
+          <view class="label">{{item.label}}:</view>
+          <view class="laInput">
+          <input placeholder='{{item.placeholder}}'
+          bindinput='inputVal'
+          data-index="{{parentIndex}}"></input></view>
+        </view> 
+        <view class="labelInput" wx:if="{{item.inputType=='select'}}">
+          <view class="label">{{item.label}}:</view>
+          <view class="laInput laInputIcon">
+            <input disabled='disabled' placeholder='{{item.placeholder}}'
+            bindtap='selectShow'
+            value="{{item.value}}"></input>
+            <scroll-view scroll-y class="select" wx:if="{{select}}">
+              <view class="selectList" 
+              wx:for="{{inputList[parentIndex].selectList}}" 
+              wx:key="{{index}}"
+              bindtap='selectListValue'
+              data-parentindex="{{parentIndex}}" data-index="{{index}}">
+                {{item.name}}
+              </view>
+            </scroll-view>
+           </view>
+        </view>
+        <view class="tips" wx:if="{{item.inputType=='text'}}">{{item.textContent}}</view> 
+        <input class="input" placeholder='{{item.placeholder}}' 
+        wx:if="{{item.inputType=='input'}}"
+        bindinput='inputVal'
+        data-index="{{parentIndex}}"
+        ></input> 
+      </view>
+      <view class="groupBtn clear">
+        <view class="btnConfirm" bindtap='confirm'><button>确定</button></view>
+        <view class="btnCancel" bindtap='cancel'><button>取消</button></view>
+      </view>
+    </view>
+  </view>   
+</view>  

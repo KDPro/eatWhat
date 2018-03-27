@@ -1,0 +1,36 @@
+<!--pages/search/search.wxml-->
+<view class="indexBox">
+<!-- 搜索框 -->
+  <view class="search">
+    <view class="searchBox">
+      <icon class="iconfont icon-sousuo"></icon>
+      <input placeholder='搜索群名称/群主名称/群ID' 
+      bindinput='searchT'></input>
+      <view class="searchBtn" bindtap="search">搜索</view>
+    </view>
+  </view>
+<scroll-view scroll-y class="list">
+  <block wx:for="{{groupLists}}" wx:key="{{index}}">
+      <view class="group">
+        <view class="groupImg">
+          <image src='{{item.url}}'></image>
+        </view>
+        <view class="groupName">
+          <view>{{item.crowdName}}</view>
+          <view>群主：{{item.nickname}} <text bindtap='addGroup' data-id="{{item.id}}" data-name="{{item.crowdName}}">+</text> </view>
+        </view>
+      </view>
+  </block>
+  <view class="noneDate" wx:if="{{noneData}}">没有搜索到群~</view>
+</scroll-view>
+</view>
+<view class="footer">
+  <view class="fooL"></view>
+  <view class='logoName'>吃什么</view>
+  <view class="fooR"></view>
+</view>
+ <layer 
+inputList="{{inputList}}" 
+title="加入群"
+modalShow="{{modalShow}}" 
+catch:myeventBox="myeventBox"></layer> 

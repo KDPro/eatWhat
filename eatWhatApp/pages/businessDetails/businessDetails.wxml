@@ -1,0 +1,11 @@
+<!--pages/businessDetails/businessDetails.wxml-->
+   <header></header> 
+<view class="businessBox">
+  <view class="img"><image mode="widthFix" src='{{detail.image.url}}'></image></view>
+  <view class="text">
+    <view>{{detail.shopName}}</view>
+    <view>电话：{{detail.telephone}}</view>
+    <view>地址：{{detail.addr}}</view>
+    <view>记录人：{{detail.user.nickname}}</view>
+  </view>
+</view>

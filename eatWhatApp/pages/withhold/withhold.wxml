@@ -1,0 +1,2 @@
+<!--pages/withhold/withhold.wxml-->
+<view class="view"><view><icon class="iconfont icon-chenggong"></icon></view>消费成功，系统将自动扣款</view>

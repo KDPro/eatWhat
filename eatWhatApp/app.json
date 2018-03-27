@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/group/group",
+    "pages/lunch/lunch",
+    "pages/newVeg/newVeg",
+    "pages/member/member",
+    "pages/localMerchants/localMerchants",
+    "pages/localBook/localBook",
+    "pages/withhold/withhold",
+    "pages/businessDetails/businessDetails"
+  ],
+  "window": {
+    "navigationBarTitleText": "吃什么",
+    "backgroundColor":"white",
+    "navigationBarBackgroundColor":"#e9680a",
+    "navigationBarTextStyle":"white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

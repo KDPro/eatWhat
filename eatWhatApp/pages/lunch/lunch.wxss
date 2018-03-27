@@ -1,0 +1,111 @@
+/* pages/lunch/lunch.wxss */
+.lunchBox {
+  width:100%;
+  height:100%;
+  background-color: #fff;
+}
+.lunchInput {
+  height:calc(100% - 103px);
+  width:85%;
+  margin:0 auto;
+  box-sizing: border-box;
+  padding-top:50px;
+  padding-bottom:50px;
+  overflow-y: scroll;
+}
+.inputGroup .input {
+  width:100%;
+  box-sizing: border-box;
+  padding:0 20px;
+  border:1px solid #bfbfbf;
+  height:35px;
+  border-radius: 35px;
+  margin-bottom:20px;
+}
+.labelInput {
+  display:flex;
+  margin-bottom:20px;
+}
+.labelInput .label {
+  flex:3;
+  text-align: right;
+  padding-right:10px;
+  box-sizing: border-box;
+  margin-top:5px;
+}
+.labelInput .laInput {
+  flex:5;
+  position:relative;
+}
+.laInput input {
+  width:100%;
+  height:30px;
+  border-radius: 30px;
+  border:1px solid #bfbfbf;
+  box-sizing: border-box;
+  padding:0 20px 0 10px;
+}
+.labelInput .laInputIcon:after {
+  content:'\25BC';
+  position:absolute;
+  top:5px;
+  right:10px;
+}
+.labelInput .laInputIconT:after {
+  content:'\25B2';
+  position:absolute;
+  top:5px;
+  right:10px;
+}
+.select {
+  position:absolute;
+  top:32px;
+  left:0px;
+  height:100px;
+  border:1px solid #bfbfbf;
+  border-radius: 10px;
+  background-color: white;
+  z-index:10;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding:5px 10px;
+}
+.selectList {
+  border-bottom:1px solid #bfbfbf;
+  padding:5px;
+}
+.btn {
+  width:85%;
+  margin:0 auto;
+  height:35px;
+  line-height:35px;
+  border-radius: 35px;
+  text-align: center;
+  color:white;
+  letter-spacing: 2px;
+  background-color: #ff7200;
+}
+/* 底部 */
+ .footer {
+  width:90%;
+  margin-left:5%;
+  display: flex;
+  position:absolute;
+  bottom:25px;
+} 
+.fooL {
+ flex:1;
+ border-bottom:1px solid #f9d5b7;
+}
+.logoName {
+  color:#f9d5b7;
+  letter-spacing: 2px;
+  font-size:18px;
+  margin:0 15px;
+  position:relative;
+  bottom:-10px;
+}
+.fooR {
+  flex:1;
+  border-bottom:1px solid #f9d5b7;
+}

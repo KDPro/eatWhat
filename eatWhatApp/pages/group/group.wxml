@@ -1,0 +1,89 @@
+<!--pages/group/group.wxml-->
+
+<!-- 引入头部组件 -->
+<header indexY="{{index}}"></header>
+
+<!-- 详细模块 -->
+<scroll-view scroll-y class="groupBox">
+<block wx:for="{{mellList}}" wx:key="{{index}}">
+<view class='info info1'>
+<view class="infoImg">
+  <image  src="{{item.users.url}}"></image>
+</view>
+  
+  <view class='detailed'>
+    <view class='name'>{{item.name}}</view>
+  <view>目标店铺：<text>{{item.storess.shopName}}</text></view>
+  <view class='public'>
+    <view>出发时间：<text>{{item.goOff}}</text></view>
+    <view>截止时间：<text>{{item.votetime}}</text></view>
+  </view>
+  <view class='public'>
+    <view><text decode="{{true}}" space="{{true}}">合&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计：</text><text>{{item.amount}}元</text></view>
+    <view><text decode="{{true}}" space="{{true}}">人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;均：</text><text>{{item.perMoney}}元</text></view>
+  </view>
+  </view> 
+  <!-- 显示投票成功后的名字 -->
+  <view class='userList'>
+      <view wx:for="{{item.lMembers}}" wx:key="{{index}}">
+        {{item.nickname}}
+      </view>
+  </view>
+  <!-- 投票按钮 -->
+  <view class='vote_btn {{item.state>0||(item.num==item.currents)||!btnDis?"noVote":""}}' bindtap='vote' 
+  data-state="{{item.state}}" 
+  data-num="{{item.num}}"
+  data-currents="{{item.currents}}"
+  data-pcmealid = "{{item.id}}">投票<text>{{item.currents}}</text></view>
+</view>
+</block>
+
+<!-- 拼餐成功模块 -->
+<view class='success info' wx:if="{{ifSuccess}}">
+    <view class='success_d detailed'>
+    <view class='name'>{{yesVote.name}}</view>
+  <view>目标店铺：{{yesVote.storess.shopName}}</view>
+  <view class='public'>
+    <view>出发时间：{{yesVote.goOff}}</view>
+    <view>截止时间：{{yesVote.votetime}}</view>
+  </view>
+  <view class='public'>
+    <view><text decode="{{true}}" space="{{true}}">合&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计：</text><input type='number' 
+    class='time {{!disable?"border":""}}' 
+    value='{{yesVote.amount}}'
+    bindinput='editAllPrice'
+    disabled='{{disable}}'/>元</view>
+    <view><text decode="{{true}}" space="{{true}}">人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;均：</text>{{yesVote.perMoney}}元</view>
+  </view>
+  </view>
+  <!-- 显示投票成功后的名字 -->
+  <view class='userList'>
+      <view wx:for="{{yesVote.lMembers}}" wx:key="{{index}}">
+        <!-- <input type='text' value='{{item.name}}'/> -->
+        {{item.nickname}}:
+        <input  type='text' data-id="{{item.id}}" data-index="{{index}}" value='{{yesVote.perMoney}}' 
+        class='amount {{!disable?"border":""}}'
+        bindinput='editPrice' 
+        disabled='{{disable}}'/>元
+      </view>
+  </view>
+  <!-- 确定取消按钮 -->
+  <view class='btn'>
+    <view class='success_btn' bindtap='success'
+    data-id="{{yesVote.id}}" wx:if="{{btnDis}}">确定</view>
+    <view class='canel_btn' bindtap='canel' wx:if="{{btnDis}}">修改</view>
+  </view>
+</view>
+</scroll-view>
+
+ <view class="footer">
+  <view class="fooL"></view>
+  <view class='logoName'>吃什么</view>
+  <view class="fooR"></view>
+</view> 
+
+ <layer 
+inputList="{{inputList}}" 
+title="提示"
+modalShow="{{modalShow}}" 
+catch:myeventBox="myeventBox"></layer> 

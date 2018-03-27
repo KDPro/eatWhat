@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "期望午餐",
+  "usingComponents": {
+    "header": "../../components/header/header",
+    "layer": "../../components/layer/layer"
+  }
+}

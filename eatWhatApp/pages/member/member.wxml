@@ -1,0 +1,19 @@
+<!--pages/member/member.wxml-->
+
+<!-- 引入头部组件 -->
+<header indexY="{{index}}"></header>
+
+<!--  成员列表 -->
+<scroll-view scroll-y class="memberBox">
+  <view class='member'>
+    <view wx:for="{{memberList}}" wx:key="index">
+      <image src='{{item.url}}'></image>
+      <view>{{item.nickname}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="footer">
+  <view class="fooL"></view>
+  <view class='logoName'>吃什么</view>
+  <view class="fooR"></view>
+</view>

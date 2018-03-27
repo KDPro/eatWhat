@@ -1,0 +1,120 @@
+/* pages/search/search.wxss */
+.indexBox {
+  height:100%;
+  width:100%;
+  background-color: #ffffff;
+}
+.search {
+  width:100%;
+  height:50px;
+  box-sizing: border-box;
+  padding-top:10px;
+  border-bottom:1px solid #bfbfbf;
+}
+.searchBox {
+  width:90%;
+  margin:0 auto;
+  height:30px;
+  border-radius: 30px;
+  background: white;
+  border:1px solid #e9680a;
+  position:relative; 
+}
+.searchBox icon {
+  position:absolute;
+  top:-2px;
+  left:20px;
+}
+.searchBox input {
+  height:30px;
+  border-radius: 30px;
+  padding:0 60px 0 40px; 
+  box-sizing: border-box;
+}
+.searchBtn {
+  width:60px;
+  position:absolute;
+  top:0;
+  right:0;
+  height:30px;
+  line-height:30px;
+  border-radius: 30px;
+  background-color: #e9680a;
+  color:white;
+  text-align: center;
+}
+/* 列表 */
+.list {
+  height:calc(100% - 112px);
+  overflow: hidden;
+}
+.group {
+  padding:5px 15px;
+  border-bottom:1px solid #bfbfbf;
+  display:flex;
+}
+.groupImg {
+  width:60px;
+  height:60px;
+  border-radius: 100%;
+}
+.groupImg image {
+  width:100%;
+  height:100%;
+  border-radius: 100%;
+}
+.groupName {
+  flex: 1;
+  padding:8px 0 8px 15px; 
+}
+.groupName view:nth-of-type(1){
+  font-size:16px;
+  margin-bottom:5px;
+}
+.groupName view:nth-of-type(2){
+  font-size:14px;
+  color:#a2a2a2;
+  position:relative;
+}
+.groupName view:nth-of-type(2) text {
+  float:right;
+  font-size:40px;
+  color:#e9680a;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.noneDate {
+  font-size:14px;
+  margin-top:20px;
+  color:#e9680a;
+  text-align: center;
+}
+
+/* 底部 */
+ .footer {
+  width:90%;
+  margin-left:5%;
+  display: flex;
+  position:absolute;
+  bottom:25px;
+} 
+.fooL {
+ flex:1;
+ border-bottom:1px solid #f9d5b7;
+}
+.logoName {
+  color:#f9d5b7;
+  letter-spacing: 2px;
+  font-size:18px;
+  margin:0 15px;
+  position:relative;
+  bottom:-10px;
+}
+.fooR {
+  flex:1;
+  border-bottom:1px solid #f9d5b7;
+}
+
+

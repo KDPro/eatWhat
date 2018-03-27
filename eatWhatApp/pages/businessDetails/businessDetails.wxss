@@ -1,0 +1,29 @@
+/* pages/businessDetails/businessDetails.wxss */
+.businessBox {
+  padding:0 15px;
+  height:calc(100% - 53px);
+  background-color: #ffffff;
+}
+.businessBox .img {
+  width:100%;
+  margin:0 auto;
+  padding-top:30px;                                                                                                                     
+}
+.businessBox .img image {
+  width:100%;
+  border-radius:5px;
+}
+.businessBox .text {
+  width:70%;
+  margin:0 auto;
+  margin-top:20px;
+}
+.businessBox .text view {
+  margin-bottom:10px;
+  font-size:15px;
+  font-weight: bold;
+  color:#414141;
+}
+.businessBox .text view:nth-of-type(1) {
+  color:#ff7200;
+}
